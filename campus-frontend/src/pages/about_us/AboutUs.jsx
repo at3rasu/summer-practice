@@ -1,0 +1,47 @@
+import { useEffect } from "react"
+import { Header, Footer } from '../index'
+import styles from './AboutUs.module.css'
+
+export const AboutUs = () =>{
+    useEffect(() => {
+        document.title = 'О нас'
+    })
+
+    return(
+        <div className={styles.page}>
+            <Header />
+            <div className={styles.container}>
+                <div className={styles.title}>
+                    <h1>О нас</h1>
+                    <p>Информационная система «Кампус»</p>
+                </div>
+                <div className={styles.number}>
+                    <div className={styles.enum}>
+                        <p>01</p>
+                        <p>Поддержка высшего образования Свердловской области</p>
+                    </div>
+                    <div className={styles.enum}>
+                        <p>02</p>
+                        <p>Поддержка студентов Свердловской области</p>
+                    </div>
+                    <div className={styles.enum}>
+                        <p>03</p>
+                        <p>Стипендиальные и скидочные программы</p>
+                    </div>
+                </div>
+                <div className={styles.content}>
+                    <p>Основной целью деятельности фонда «Кампус» и его программ является
+                        поддержка высшего образования в Свердловской области.</p>
+                </div>
+                <div className={styles.text}>
+                    <p>Фонд «Кампус» нацелен на поддержку студентов в период обучения. Мы 
+                        хотим сделать студенческие годы лучше, а обучение доступнее, поэтому 
+                        наша организация предоставляет различные льготы для учащихся. На сайте
+                        Вы сможете найти разные программы поддержки: арендное жильё, кредитная
+                        и стипендиальная программы, система лояльности и не только.</p>
+                </div>
+            </div> 
+            <Footer />    
+        </div> 
+    )
+}

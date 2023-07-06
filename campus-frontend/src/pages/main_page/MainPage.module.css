@@ -1,0 +1,477 @@
+@font-face {
+    font-family: 'Giga Sans';
+    src: url(/src/fonts/giga_sans/GigaSans-Medium.ttf);
+}
+
+.container{
+    min-height: calc(100vh - 80px);
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    box-sizing: border-box;
+}
+
+.firstContainer{
+    background: #F42E30;
+    width: 100%;
+}
+
+.fisrtContent{
+    height: 745px;
+    max-width: 1650px;
+    width: 90%;
+    margin: 0 auto;
+    background: #F42E30;
+    display: flex;
+    gap: 7%;
+}
+
+.firstText{
+    padding-top: 7%;
+}
+
+.firstText h1{
+    font-family: 'Giga Sans';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 64px;
+    line-height: 77px;
+    display: flex;
+    align-items: center;
+    color: #FFFFFF;
+}
+
+.firstText img{
+    padding-top: 31px;
+}
+
+.firstText p{
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 128%;
+    width: 597px;
+    color: #FFFFFF;
+    margin-top: 66px;
+    margin-left: 152px;
+}
+
+.firstSvg{
+    margin-top: 6%;
+}
+
+.secondContainer{
+    max-height: 1000px;
+    min-height: 300px;
+    width: 100%;
+}
+
+.secondContent{
+    width: 1680px;
+    margin: 80px auto;
+}  
+
+.vacancy{
+    display: flex;
+    gap: 20px;
+}
+
+.vacancy hr{
+    border-radius: 15px;   
+    width: 405px;
+    height: 15px; 
+    border: none;
+}
+
+.vacancy h1{
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 36px;
+    color: #000000;
+    text-align: center;
+} 
+
+.new{
+    display: flex;
+    flex-direction: column;
+}
+
+.new hr{
+    background: #C0ECAB;
+}
+
+.featured{
+    display: flex;
+    flex-direction: column;
+}
+
+.featured hr{
+    background: #ECABB3;
+}
+
+.popular{
+    display: flex;
+    flex-direction: column;
+}
+
+.popular hr{
+    background: #EBABEC;
+}
+
+.recent{
+    display: flex;
+    flex-direction: column;
+}
+
+.recent hr{
+    background: #ABECEC;
+}
+
+.thirdContainer{
+    height: 1000px;
+    background: #8269EF;
+}
+
+.thirdContent{
+    width: 1680px;
+    margin: 0 auto;
+}
+
+.search{
+    display: flex;
+
+}
+
+.search img{
+    position: absolute;
+
+}
+
+.secondText{
+    padding-top: 110px;
+    align-items: center;
+    text-align: center;
+}
+
+.secondText h1{
+    font-weight: 800;
+    font-size: 104px;
+    line-height: 126px;
+    color: #FFFFFF;
+}
+
+.secondText p{  
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 58px;
+    margin-right: 360px;
+    color: #FFFFFF;
+}
+
+.textContent{
+    display: flex;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 29px;
+    margin-left: 5%;
+    margin-right: 5%;
+    padding-top: 170px;
+    gap: 151px;
+    color: #FFFFFF;
+}
+
+.textContent p{
+    width: 668px;
+}
+
+.textContent button{
+    font-family: 'Inter';
+    background: #FFFFFF;
+    box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.11);
+    border-radius: 16px;
+    width: 363px;
+    height: 50px;
+    font-weight: normal;
+    font-size: 21px;
+    line-height: 24px;
+    align-items: center;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+    color: #8269EF;
+    margin-left: 15%;
+}
+
+.block{
+    display: flex;
+    flex-direction: column;
+    gap: 51px;
+}
+
+.block1{
+    display: flex;
+    flex-direction: column;
+    gap: 79px;
+}
+
+.img{
+    position: absolute;
+    top: 416px;
+    border-radius: 0 50px;
+    pointer-events: none;
+}
+
+.svg{
+    background-image: url(/public/img/container.svg);
+    background-repeat: no-repeat;
+    height: 160px;  
+}
+
+.svg1{
+    background-image: url(/public/img/container1.svg);
+    background-repeat: no-repeat;
+    height: 130px;
+    margin: 0 auto;
+}
+
+.svg2{
+    background-image: url(/public/img/footer.svg);
+    background-repeat: no-repeat;
+    height: 160px;
+    margin-top: 190px;
+}
+
+@media (max-width: 1600px){
+    .fisrtContent{
+        height: 715px;
+    }
+
+    .img{
+        display: none;
+    }
+
+    .firstText h1{
+        font-size: 50px;
+        white-space: nowrap;
+        margin-left: 15px;
+    }
+
+    .firstSvg img{
+        width: 455px;
+        margin-left: 150px;
+    }
+
+    .firstText img{
+        padding-top: 2px;
+        width: 560px;
+        margin-left: 10px;
+    }
+
+    .firstText p{
+        font-size: 21px;
+        margin-top: 30px;
+        margin-left: 15px;
+    }
+
+    .thirdContent{
+        width: 100%;
+        margin: 0 10px;
+    }
+
+    .thirdContainer{
+        height: 837px;
+    }
+
+   
+    
+    .secondText h1{ 
+        font-size: 70px;
+        line-height: 40px;
+    }
+    
+    .secondText p{  
+        font-size: 38px;
+        white-space: nowrap;
+    }
+
+    .textContent button{
+        width: 280px;
+        height: 45px;
+        border-radius: 18px;
+        font-size: 16px;
+        margin-left: 9%;
+    }
+    
+    .block{
+        gap: 30px;
+    }
+
+    .block1{
+        gap: 30px;
+    }
+
+    .textContent p{
+        width: 100%;
+    }
+
+    .secondContent{
+        margin: 0 3%;
+    }
+
+    .vacancy hr{
+        width: 290px;
+        height: 8px;
+    } 
+
+    .vacancy h1{
+        font-size: 25px;
+    }
+}
+
+@media(max-width:1200px){
+}
+
+@media (max-width: 960px){
+    
+}
+
+@media (max-width:760px){
+
+}
+
+@media (max-width: 480px){
+    .page{
+        overflow: hidden;
+    }
+
+    .fisrtContent{
+        height: 715px;
+        width: 30%;
+        margin: 0;
+        flex-direction: column-reverse;
+    }
+
+    .img{
+        display: none;
+    }
+
+    .firstText h1{
+        font-size: 30px;
+        white-space: nowrap;
+        margin-left: 15px;
+    }
+
+    .page{
+        width: 100%;
+    }
+
+    .firstSvg img{
+        width: 370px;
+        margin-left: 10px;
+    }
+
+    .firstSvg{
+        display: flex;
+        margin: 0;
+        
+    }
+
+    .firstText img{
+        padding-top: 2px;
+        width: 360px;
+        margin-left: 10px;
+    }
+
+    .firstText p{
+        font-size: 18px;
+        width: 340px;
+        margin-top: 30px;
+        margin-left: 15px;
+    }
+
+    .thirdContent{
+        width: 100%;
+        margin: 0 10px;
+    }
+
+    .thirdContainer{
+        height: 800px;
+    }
+
+    .secondText{
+        text-align: start;
+        padding-top: 11px;
+        margin-left: 20px;
+    }
+    
+    .secondText h1{ 
+        white-space: nowrap;
+        font-size: 40px;
+        line-height: 40px;
+    }
+    
+    .secondText p{  
+        font-size: 28px;
+        white-space: nowrap;
+    }
+    
+    .textContent{ 
+        display: flex;
+        flex-direction: column;
+        font-size: 18px;
+        line-height: 25px;
+        padding-top: 42px;
+        gap: 60px;
+    }
+
+    .textContent button{
+        width: 280px;
+        height: 45px;
+        border-radius: 18px;
+        font-size: 16px;
+        margin-left: 9%;
+    }
+    
+    .block{
+        gap: 30px;
+    }
+
+    .block1{
+        gap: 30px;
+    }
+
+    .textContent p{
+        width: 100%;
+    }
+
+    .secondContent{
+        width: 30%;
+        margin: 0 18%;
+    }
+
+    .vacancy hr{
+        width: 260px;
+        height: 8px;
+    }
+
+    .vacancy h1{
+        font-size: 30px;
+    }
+
+    .featured{
+        display: none;
+    }
+
+    .popular{
+        display: none;
+    }
+
+    .recent{
+        display: none;
+    }
+
+    .svg2{
+        display: none;
+    }
+}
+
+@media(max-width:320px){
+}

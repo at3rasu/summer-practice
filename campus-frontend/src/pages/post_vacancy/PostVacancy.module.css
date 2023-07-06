@@ -1,0 +1,233 @@
+.container{
+    min-height: calc(100vh - 80px);
+    width: 1680px;
+    margin: 0px auto;
+    padding-bottom: 100px;
+    font-family: 'Inter';
+    font-style: normal;
+}
+
+
+@media(max-width:1680px){
+    .container{
+        max-width: 1400px;
+    }
+
+}
+
+@media(max-width:1680px){
+    .container{
+        max-width: 390px;
+    }
+
+}
+
+.title{
+    display: flex;
+    justify-content: center;
+    padding-top: 103px;
+    align-items: center;
+}
+
+.title hr{
+    border: 1px solid #C6B9FE;
+    width: 100px;
+    height: 0;
+}
+
+.title h1{
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 36px;
+    text-align: center;
+    padding-left: 10px;
+    padding-right: 10px;
+
+    color: #8269EF;
+}
+
+.hrData{
+    width: 100%;
+    margin-top: 103px;
+    margin-bottom: 70px;
+}
+
+.inputData{
+    margin-left: 2%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 40px;
+}
+
+.inputData label{
+    font-family: 'Inter';
+    padding-bottom: 20px;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 36px;
+    white-space: nowrap;
+    color: #000000;
+}
+
+.inputData p{
+    margin-left: 4%;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 30px;
+    width: 600px;
+    color: rgba(0, 0, 0, 0.8);
+}
+
+.inputData input{
+    font-family: 'Inter';
+    width: 98%;
+    background-color: #fafafa;
+    border:0;
+    box-shadow:0 0 4px rgba(0,0,0,0.3);
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 30px;
+    padding: 10px;
+    outline: none;
+}
+
+.inputData textarea{
+    font-family: 'Inter';
+    width: 98%;
+    height: 48px;
+    overflow: hidden;
+    background-color: #fafafa;
+    border:0;
+    box-shadow:0 0 4px rgba(0,0,0,0.3);
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 30px;
+    padding: 10px;
+    outline: none;
+}
+
+.buttonSubmit{
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+}
+
+.buttonSubmit button{
+    font-family: 'Inter';
+    width: 343px;
+    height: 50px;
+    background: #8269EF;
+    box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.11);
+    border-radius: 16px;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 100%;
+    text-align: center;
+    color: #FFFFFF;
+    cursor: pointer;
+    border: none;
+}
+
+
+.inputFile{
+    margin-left: 2%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 40px;
+}
+
+.inputFile span{
+    display: flex;
+}
+
+.inputFile label{
+    padding-bottom: 20px;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 36px;
+    white-space: nowrap;
+
+    color: #000000;
+}
+
+.inputFile p{
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 30px;
+    margin-left: -50px;
+
+    color: rgba(0, 0, 0, 0.8);
+}
+
+.inputFile input{
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 30px;
+    cursor: pointer;
+}
+
+.briefInfo{
+    margin-left: 1%;
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 36px;
+    color: #352F2F
+}
+
+@media(max-width:480px){
+    .container{
+        margin: 0 auto;
+        max-width: 340px;
+    }
+
+    .page{
+        overflow: hidden;
+    }
+
+    .hrData{
+        width: 100%;
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+
+    .title{
+        padding-top: 53px;
+    }
+
+    .title h1{
+        font-size: 23px;
+        white-space: nowrap;
+    }
+
+    .briefInfo{
+        font-size: 19px;
+    }
+        
+    .inputData label{
+        font-size: 17px;
+    }
+
+    .inputData{
+        margin-top: 20px;
+    }
+    
+    .inputData input{
+        width: 96%;
+        font-size: 16px;
+    }
+
+    .inputData textarea{
+        width: 96%;
+        font-size: 16px;
+    }
+    
+    .buttonSubmit{
+        margin-top: 50px;
+    }
+    
+    .buttonSubmit button{
+        width: 96%;
+        font-size: 16px;
+    }
+}
+

@@ -1,0 +1,219 @@
+.container{
+    min-height: calc(100vh - 80px);
+    width: 1396px;
+    margin: 100px auto;
+    font-family: 'Inter';
+    font-style: normal;
+}
+
+.cardCompany{
+    display: flex;
+    gap: 50px;
+}
+
+.vacancy{
+    background: #FFFFFF;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+    width: 971px;
+}
+
+.company{
+    background: #FFFFFF;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+    width: 405px;
+    padding: 50px;
+}
+
+.company h1{
+    font-style: normal;
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 30px;
+    color: #000000;
+}
+
+.company p{
+    padding: 20px 0;
+}
+
+.vacancy button{
+    width: 250px;
+    height: 40px;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 100%;
+    cursor: pointer;
+    text-align: center;
+    color: #FFFFFF;
+    border: none;
+    text-decoration: none; 
+    user-select: none; 
+    background: #F52D30;
+    border-radius: 16px;
+    outline: none;
+    margin: 20px 25px;
+}
+
+.vacancy h1{
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 30px;
+    color: #000000;
+    margin: 30px;
+}
+
+.vacancy p{
+    height: 70px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    display: flex;
+    align-items: center;
+    color: #000000;
+    margin: 5px 30px;
+    width: 618px;
+}
+
+.content h3{
+    margin: 40px 0px;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 30px;
+    color: #000000;
+}
+
+.content li{
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+    color: #000000;
+    margin-left: 20px;
+}
+
+.secondContent{
+    margin: 50px 0;
+    width: 971px;
+}
+
+.secondContent h3{
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 30px;
+    margin: 15px 0;
+    color: #000000;
+    margin-left: 20px;
+}
+
+.secondContent h1{
+    font-weight: 600;
+    font-size: 25px;
+    line-height: 30px;
+    color: #000000;
+    margin-bottom: 35px;
+}
+
+.secondContent span{
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    color: #0664D3CC;;
+    text-decoration: underline;
+    padding-left: 7px;
+}
+
+.content{
+    width: 971px;
+}
+
+@media(max-width:480px){
+    .container{
+        width: 480px;
+        margin: 30px 0;
+    }
+
+    .vacancy button{
+        width: 90vw;
+        height: 30px;
+        font-size: 15px;
+        margin: 15px 20px;
+    }
+
+    .cardCompany{
+        flex-direction: column;
+    }
+    .vacancy{
+        box-shadow: none;
+        width: 100vw;
+        height: 230px;
+    }
+    
+    .company{
+        box-shadow: none;
+        width: 100vw;
+        margin-left: 0;
+        height: 130px;
+    }
+
+    .company h1{
+        font-size: 25px;
+        padding: 0 20px;
+    }
+    
+    .company p{
+        padding: 20px;
+    }
+
+    .vacancy h1{
+        font-size: 25px;
+        margin: 20px;
+    }
+    
+    .vacancy p{
+        height: 100px;
+        font-size: 14px;
+        margin: 5px 20px;
+        width: 380px;
+    }
+    
+    .content h3{
+        margin: 20px 0px;
+        font-weight: 600;
+        font-size: 18px;
+        margin-left: 10px;
+    }
+    
+    .content li{
+        font-size: 14px;
+        width: 360px;
+    }
+    
+    .secondContent{
+        margin: 20px 0;
+        width: 100vw;
+    }
+    
+    .secondContent h3{
+        font-size: 15px;
+        margin-left: 20px;
+    }
+    
+    .secondContent h1{
+        font-size: 18px;
+        margin-bottom: 5px;
+        margin-left: 10px;
+    }
+    
+    .secondContent span{
+        font-size: 14px;
+    }
+    
+    .content{
+        width: 100vw;
+    }
+
+    .page{
+        overflow: hidden;
+    }
+}
