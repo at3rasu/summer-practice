@@ -15,6 +15,17 @@ export const notify = () => toast.error("Доступно только для а
     theme: "colored",
 })
 
+export const notify1 = () => toast.error("Доступно только для авторизированных пользователей", {
+    position: "top-center",
+    autoClose: 5000,
+    hideProgressBar: true,
+    closeOnClick: true,
+    pauseOnHover: true,
+    draggable: true,
+    progress: undefined,
+    theme: "colored",
+})
+
 export const info = () => toast.info("Чтобы откликнуться на вакансию авторизуйтесь!", {
     position: "top-right",
     autoClose: 5000,
