@@ -18,6 +18,7 @@ import { Error404 } from "../components/error/Error404";
 import { PrivateRouteCompany, PrivateRouteUser } from "../utils/Consts";
 import { VacancyCompany } from "../pages/vacancy_company/VacancyCompany";
 import { Feedback } from "../pages/feedback/Feedback";
+import { SingInAdmin } from "../pages/auth/SingInAdmin";
 
 
 export const Router = () =>{
@@ -36,6 +37,7 @@ export const Router = () =>{
                 <Route path="/AccountCompany" element={<AccountCompany />}/>
                 <Route path="/VacancyCompany" element={<VacancyCompany />}/>
             </Route> 
+            <Route path="/SingInAdmin" element={<SingInAdmin/>}/>
             <Route path="/Vacancy" element={<Vacancy />}/>
             <Route path="/vacancies/:id" element={<VacancyDetails />}/>
             <Route path="/SingIn" element={<SingIn />}/>
