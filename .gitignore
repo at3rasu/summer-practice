@@ -20,6 +20,8 @@ yarn-debug.log*
 yarn-error.log*
 
 
-../campus-frontend/build
+../client/build
+../server/dist
 */build
+*/dist
 .development.env
