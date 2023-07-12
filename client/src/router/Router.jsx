@@ -37,7 +37,7 @@ export const Router = () =>{
                 <Route path="/AccountCompany" element={<AccountCompany />}/>
                 <Route path="/VacancyCompany" element={<VacancyCompany />}/>
             </Route> 
-            <Route path="/SingInAdmin" element={<SingInAdmin/>}/>
+            <Route path="/admin" element={<SingInAdmin/>}/>
             <Route path="/Vacancy" element={<Vacancy />}/>
             <Route path="/vacancies/:id" element={<VacancyDetails />}/>
             <Route path="/SingIn" element={<SingIn />}/>

@@ -45,7 +45,7 @@ export const ChartRegister = () =>{
             <div className={styles.chart}>
                 <Line data={data} options={options} ></Line>    
             </div> 
-            <p>Всего: 336</p>
+            <button>Показать полностью</button>
         </div>
     )
 }
