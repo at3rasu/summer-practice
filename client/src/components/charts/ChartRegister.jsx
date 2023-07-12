@@ -7,7 +7,6 @@ import {
     LinearScale,
     PointElement
 }from 'chart.js'
-import { useNavigate } from 'react-router-dom'
 
 ChartJS.register(
     LineElement,
@@ -22,7 +21,6 @@ export const ChartRegister = () =>{
         datasets: [{
             label: "Студентов",
             data: [ 24, 38, 45, 56, 61, 81, 91], 
-            fill: true, // Закрасить область под линией данных
             backgroundColor: 'rgba(245, 45, 48, 0.21)'
         }]
     }
@@ -39,16 +37,16 @@ export const ChartRegister = () =>{
             }
         }
     }
-    const navigate = useNavigate()
 
     return(
         <div className={styles.box}>
-            <h1>Динамика регистраций</h1>
+            <span className={styles.title}>
+                <h1>Динамика регистраций</h1>
+                <h1>Всего: 336</h1>
+            </span>
             <div className={styles.chart}>
                 <Line data={data} options={options} ></Line>    
             </div> 
-            <button
-                onClick={() => navigate('/MoreChart')}>Показать полностью</button>
         </div>
     )
 }
