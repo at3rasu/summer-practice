@@ -7,6 +7,7 @@ import {
     LinearScale,
     PointElement
 }from 'chart.js'
+import { useNavigate } from 'react-router-dom'
 
 ChartJS.register(
     LineElement,
@@ -38,6 +39,7 @@ export const ChartRegister = () =>{
             }
         }
     }
+    const navigate = useNavigate()
 
     return(
         <div className={styles.box}>
@@ -45,7 +47,8 @@ export const ChartRegister = () =>{
             <div className={styles.chart}>
                 <Line data={data} options={options} ></Line>    
             </div> 
-            <button>Показать полностью</button>
+            <button
+                onClick={() => navigate('/MoreChart')}>Показать полностью</button>
         </div>
     )
 }

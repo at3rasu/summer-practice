@@ -61,20 +61,3 @@
     border: none;
     outline: none;
 }
-
-.btn button{
-	outline: none;
-	border: none;
-	background: #F52D30;
-	border-radius: 24px;
-	width: 173px;
-	height: 34px;
-	color: #FFFFFF;
-	font-family: "Inter";
-	font-weight: 500;
-	cursor: pointer;
-}
-
-.btn button:active{
-	background: #F54345;
-}

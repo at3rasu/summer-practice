@@ -4,6 +4,7 @@ import { ChartCity } from '../../components/charts/ChartCity'
 import { Table } from '../../components/charts/Table'
 import { useEffect } from 'react'
 import { TableStudent } from '../../components/charts/TableStudent'
+import { HeaderAdmin } from '../../components/header/HeaderAdmin'
 
 export const Statistics = () => {
     useEffect(() => {
@@ -12,9 +13,7 @@ export const Statistics = () => {
 
     return(
         <div className={styles.page}>
-            <header className={styles.header}>
-                    <h1>Инфопанели</h1>
-            </header>
+            <HeaderAdmin />
             <div className={styles.container}>
                 <div className={styles.chart}>
                     <div className={styles.table}>
