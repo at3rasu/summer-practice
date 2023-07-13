@@ -6,14 +6,14 @@ import {
     PieController,
     ArcElement,
     Title, 
-    Legend
+    // Legend
 }from 'chart.js'
 
 ChartJS.register(
     PieController,
     ArcElement, 
     Title, 
-    Legend
+    // Legend
 )
 
 export const ChartCity = () =>{
@@ -28,10 +28,10 @@ export const ChartCity = () =>{
       })
 
     const options = {
-        legend: {
-            display: true,
-            position: "left"
-        },
+        // legend: {
+        //     display: true,
+        //     position: "left"
+        // },
         borderColor: 'white',
         pointBorderColor: 'red',
         pointRadius: 5,
