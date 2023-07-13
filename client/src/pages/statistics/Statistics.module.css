@@ -4,18 +4,67 @@
 }
 
 .container{
-    width: 90vw;
+    width: 80vw;
     margin: 0 auto;
     padding: 50px 0;
 }
 
+.title h1{
+    font-size: 35px;
+    font-weight: 600;
+    font-family: 'Inter';
+    padding: 30px 0;
+}
+
 .chart{
     display: flex;
+    flex-direction: column;
     gap: 65px;
 }
 
 .table{
     display: flex;
-    flex-direction: column;
     gap: 50px;
+}
+
+.grid{
+    display: flex;
+    gap: 50px;
+}
+
+.flex{
+    background: #FFFFFF;
+    padding: 50px;
+    border-radius: 30px;
+    box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.11);
+}
+
+.flex h1{
+    font-size: 40px;
+    font-family: "Inter";
+}
+
+.flex p{
+    font-size: 22px;
+    font-family: "Inter";
+    padding-bottom: 20px;
+}
+
+.gridReg{
+    background: #FFFFFF;
+    padding: 50px;
+    border-radius: 30px;
+    box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.11);
+}
+
+.gridReg p{
+    font-size: 22px;
+    font-family: "Inter";
+    padding-bottom: 20px;
+    padding-top: 50px;
+}
+
+.gridReg h1{
+    font-size: 50px;
+    font-family: "Inter";
 }
