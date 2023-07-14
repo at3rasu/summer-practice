@@ -56,7 +56,7 @@ export const ChartRegister = () => {
                 }
             }
         },
-        borderRadius:8
+        borderRadius:10
       }}
       data={barChartData}
     />
