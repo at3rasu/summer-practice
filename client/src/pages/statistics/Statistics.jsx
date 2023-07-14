@@ -50,6 +50,18 @@ export const Statistics = () => {
                         <TableStudent />
                     </div> */}
                 </div>
+                <span className={styles.title}>
+                    <h1>Участие студентов в стипендиальной поддержке</h1>    
+                </span>
+                <div className={styles.chart}>
+                    <div className={styles.table}>
+                        <ChartRegister /> 
+                        <div className={styles.gridReg}>
+                            <p>Всего зарегистрировано</p>
+                            <h1>4550</h1>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     )
