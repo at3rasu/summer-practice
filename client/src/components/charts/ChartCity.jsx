@@ -3,18 +3,12 @@ import { useState } from 'react';
 import { Pie } from 'react-chartjs-2'
 import {
     Chart as ChartJS,
-    PieController,
     ArcElement,
-    Title, 
+    Tooltip
     // Legend
 }from 'chart.js'
 
-ChartJS.register(
-    PieController,
-    ArcElement, 
-    Title, 
-    // Legend
-)
+ChartJS.register(ArcElement, Tooltip)
 
 export const ChartCity = () =>{
     const [chartCity] = useState({
@@ -35,6 +29,8 @@ export const ChartCity = () =>{
         borderColor: 'white',
         pointBorderColor: 'red',
         pointRadius: 5,
+        borderRadius:8,
+        cutoutPercentage: 90,
         backgroundColor: [
             "#F52D30",
             "#82A2CD",

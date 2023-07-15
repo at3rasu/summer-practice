@@ -55,7 +55,7 @@ export const Statistics = () => {
                 </span>
                 <div className={styles.chart}>
                     <div className={styles.table}>
-                        <ChartRegister /> 
+                        <ChartCity /> 
                         <div className={styles.gridReg}>
                             <p>Всего зарегистрировано</p>
                             <h1>4550</h1>
