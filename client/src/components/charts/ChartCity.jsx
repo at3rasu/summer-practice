@@ -1,22 +1,24 @@
 import styles from './ChartCity.module.css'
 import { useState } from 'react';
-import { Pie } from 'react-chartjs-2'
+import { Doughnut } from 'react-chartjs-2'
 import {
     Chart as ChartJS,
     ArcElement,
-    Tooltip
+    Tooltip,
     // Legend
 }from 'chart.js'
+import ChartDataLabels from 'chartjs-plugin-datalabels';
 
 ChartJS.register(ArcElement, Tooltip)
 
 export const ChartCity = () =>{
+    const colors = ['#F42E30', '#D7282A', '#F54345', '#F98889', '#FF1800', '#BF3D30', '#684FD3'];
     const [chartCity] = useState({
         labels: ['Екатеринбург', 'Красноуральск', 'Кировград', 'Верхняя пышма', 'Новоуральск', 'Другие'],
         datasets: [
           {
-            label: 'Процент',
-            data: [48, 15, 28, 4, 23, 2]
+            label: 'Студентов',
+            data: [48, 15, 28, 4, 23, 2],
           }
         ]
       })
@@ -26,26 +28,37 @@ export const ChartCity = () =>{
         //     display: true,
         //     position: "left"
         // },
+        backgroundColor: colors,
         borderColor: 'white',
         pointBorderColor: 'red',
         pointRadius: 5,
-        borderRadius:8,
+        borderRadius:4,
         cutoutPercentage: 90,
-        backgroundColor: [
-            "#F52D30",
-            "#82A2CD",
-            "#BF68A6",
-            "#78B27C",
-            "#F3B200",
-            "#8269EF"
-        ],
+        plugins: {
+            datalabels: {
+                display: false,
+                color: "Black",
+            }
+        }
     }
+    const renderCityList = () => {
+        return chartCity.labels.map((city, index) => (
+          <li key={index} className={styles.cityItem}>
+            <span
+              className={styles.cityColor}
+              style={{ backgroundColor: options.backgroundColor[index] }}
+            ></span>
+            {city}
+          </li>
+        ));
+      };
 
     return(
         <div className={styles.box}>
-            <h1>Статистика всех студентов</h1>
+            <h1>Статистика студентов по городам</h1>
             <div className={styles.chart}>
-                <Pie  data={chartCity} options={options}></Pie>
+                <Doughnut  data={chartCity} options={options} plugins={[ChartDataLabels]}></Doughnut>
+                <ul className={styles.cityList}>{renderCityList()}</ul>
             </div> 
         </div>
     )

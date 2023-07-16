@@ -1,10 +1,9 @@
 import styles from './Statistics.module.css'
 import { ChartRegister } from '../../components/charts/ChartRegister'
-import { ChartCity } from '../../components/charts/ChartCity'
-import { Table } from '../../components/charts/Table'
+// import { Table } from '../../components/charts/Table'
 import { useEffect } from 'react'
-import { TableStudent } from '../../components/charts/TableStudent'
-import { HeaderAdmin } from '../../components/header/HeaderAdmin'
+// import { TableStudent } from '../../components/charts/TableStudent'
+import { SideBar } from '../../components/sidebar/SideBar'
 
 export const Statistics = () => {
     useEffect(() => {
@@ -12,8 +11,8 @@ export const Statistics = () => {
     })
 
     return(
-        <div className={styles.page}>
-            <HeaderAdmin />
+        <div className={styles.app}>
+            <SideBar />
             <div className={styles.container}>
                 <span className={styles.title}>
                     <h1>Динамика регистраций</h1>    
@@ -49,18 +48,6 @@ export const Statistics = () => {
                         <Table />
                         <TableStudent />
                     </div> */}
-                </div>
-                <span className={styles.title}>
-                    <h1>Участие студентов в стипендиальной поддержке</h1>    
-                </span>
-                <div className={styles.chart}>
-                    <div className={styles.table}>
-                        <ChartCity /> 
-                        <div className={styles.gridReg}>
-                            <p>Всего зарегистрировано</p>
-                            <h1>4550</h1>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>

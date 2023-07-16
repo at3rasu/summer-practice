@@ -1,0 +1,44 @@
+.component{
+    width: 350px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 70px;
+    padding: 35px 50px;
+}
+
+.img img{
+    width: 200px;
+}
+
+.link a{
+    font-family: 'Giga Sans';
+    font-weight: 600;
+    font-size: 18px;
+    display: flex;
+    gap: 10px;
+    text-decoration: none;
+    color: #000000;
+}
+
+.link{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.link button{
+    font-family: 'Giga Sans';
+    font-weight: 600;
+    font-size: 18px;
+    display: flex;
+    gap: 10px;
+    cursor: pointer;
+    background: none;
+    border: none;
+}
+
+.link button:hover{
+    color: #F52D30;
+    transition: 0.3s;
+}

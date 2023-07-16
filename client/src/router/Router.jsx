@@ -19,7 +19,9 @@ import { PrivateRouteCompany, PrivateRouteUser } from "../utils/Consts";
 import { VacancyCompany } from "../pages/vacancy_company/VacancyCompany";
 import { Feedback } from "../pages/feedback/Feedback";
 import { SingInAdmin } from "../pages/auth/SingInAdmin";
-import { MoreChartRegister } from "../pages/more_chart/MoreChartRegister";
+import { StudentStatistics } from "../pages/statistics/StudentStatistics";
+import { GrantStatistics } from "../pages/statistics/GrantStatistics";
+import { PartnersStatistics } from "../pages/statistics/PartnersStatistics";
 
 
 export const Router = () =>{
@@ -39,7 +41,6 @@ export const Router = () =>{
                 <Route path="/VacancyCompany" element={<VacancyCompany />}/>
             </Route> 
             <Route path="/admin" element={<SingInAdmin/>}/>
-            <Route path="/MoreChart" element={<MoreChartRegister/>}/>
             <Route path="/Vacancy" element={<Vacancy />}/>
             <Route path="/vacancies/:id" element={<VacancyDetails />}/>
             <Route path="/SingIn" element={<SingIn />}/>
@@ -48,6 +49,9 @@ export const Router = () =>{
             <Route path="/SingUpCompany" element={<SingUpCompany />}/>
             <Route path="/AboutUs" element={<AboutUs />}/>
             <Route path="/Statistics" element={<Statistics />}/>
+            <Route path="/studentStatistics" element={<StudentStatistics/>}/>
+            <Route path="/grantStatistics" element={<GrantStatistics/>}/>
+            <Route path="/partnersStatistics" element={<PartnersStatistics/>}/>
             <Route path="/*" element={<Error404 />}/>
         </Routes>
     )
