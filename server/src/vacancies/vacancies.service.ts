@@ -7,6 +7,10 @@ import { UploadFilesService } from 'src/upload-files/upload-files.service';
 import { UsersCompanyService } from 'src/users-company/users-company.service';
 import { AuthService } from 'src/auth/auth.service';
 import { FileType, FilesService } from 'src/files/files.service';
+import { UsersService } from 'src/users/users.service';
+import { FeedbackService } from 'src/feedback/feedback.service';
+import { CreateFeedbackDto } from 'src/feedback/dto/create-feedback.dto';
+import { ResumeService } from 'src/resume/resume.service';
 
 @Injectable()
 export class VacanciesService {
@@ -16,6 +20,9 @@ export class VacanciesService {
                 private userCompanyService: UsersCompanyService,
                 // private filesService: FilesService,
                 // private authService: AuthService
+                private userService: UsersService,
+                private feedbackService: FeedbackService,
+                private resumeService: ResumeService
                 ){}
 
     async createVacancy(vacancyDto: CreateVacancyDto, 
@@ -53,5 +60,21 @@ export class VacanciesService {
     async updateVacancy(id, updateVacancyDto){
         const vacancy = await this.vacancyRepository.update(updateVacancyDto, {where: {id}, returning: true})
         return vacancy
+    }
+
+    async insertResume(id, req){
+        const vacancy = await this.vacancyRepository.findByPk(id)
+        const resume = await this.userService.getResumeByUser(req)
+        const feedback = await this.feedbackService.create(new CreateFeedbackDto(vacancy.id, resume[0].id))
+        return feedback
+    }
+
+    async getAllResumeByVacancyId(id){
+        const resumeId = await this.feedbackService.getAllResumeIdByVacancyId(id);
+        const resume = []
+        for (const id of resumeId){
+            resume.push(await this.resumeService.getResumeById(id))
+        }
+        return resume
     }
 }

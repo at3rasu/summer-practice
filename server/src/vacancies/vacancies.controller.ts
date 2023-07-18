@@ -42,4 +42,18 @@ export class VacanciesController {
     deleteVacancy(@Param('id') id){
         return this.vacanciesService.deleteVacancy(id)
     }
+
+    @Post('/insert_resume/:id')
+    @Roles('admin', 'user')
+    @UseGuards(RolesGuard)
+    insertResume(@Param('id') id_vacancy, @Req() request: Request){
+        return this.vacanciesService.insertResume(id_vacancy, request)
+    }
+
+    @Get('/get_resume/:id')
+    @Roles('admin', 'user', 'user_company')
+    @UseGuards(RolesGuard)
+    getAllResumeByVacancyId(@Param('id') id_vacancy){
+        return this.vacanciesService.getAllResumeByVacancyId(id_vacancy)
+    }
 }
