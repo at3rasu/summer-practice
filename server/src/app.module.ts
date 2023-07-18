@@ -18,11 +18,14 @@ import * as path from "path";
 import { Image } from "./upload-files/images.model";
 import { ResumeModule } from './resume/resume.module';
 import { Resume } from "./resume/resume.model";
+import { FeedbackController } from './feedback/feedback.controller';
+import { FeedbackModule } from './feedback/feedback.module';
+import { VacanciesResume } from "./feedback/feedback.model";
 
 
 @Module({
     controllers: [
-    ],
+    FeedbackController],
     providers: [],
     imports: [
       ConfigModule.forRoot({
@@ -50,7 +53,8 @@ import { Resume } from "./resume/resume.model";
           UserCompany, 
           Vacancy, 
           UserCompanyRoles,
-          Resume
+          Resume,
+          VacanciesResume
         ],
         autoLoadModels: true,
         dialectOptions: {
@@ -63,7 +67,8 @@ import { Resume } from "./resume/resume.model";
       UsersCompanyModule,
       VacanciesModule,
       // FilesModule,
-      ResumeModule
+      ResumeModule,
+      FeedbackModule
     ]
 })
 

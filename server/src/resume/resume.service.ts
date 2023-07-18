@@ -44,4 +44,9 @@ export class ResumeService {
         const resume = await this.resumeRepository.update(updateResumeDto, {where: {id}, returning: true})
         return resume
     }
+
+    async getResumeById(id){
+        const resume = await this.resumeRepository.findByPk(id)
+        return resume
+    }
 }

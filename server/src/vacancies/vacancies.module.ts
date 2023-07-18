@@ -10,6 +10,9 @@ import { UserCompany } from 'src/users-company/users-company.model';
 import { UploadFilesModule } from 'src/upload-files/upload-files.module';
 import { UsersCompanyModule } from 'src/users-company/users-company.module';
 import { FilesModule } from 'src/files/files.module';
+import { UsersModule } from 'src/users/users.module';
+import { FeedbackModule } from 'src/feedback/feedback.module';
+import { ResumeModule } from 'src/resume/resume.module';
 
 @Module({
   controllers: [VacanciesController],
@@ -23,7 +26,10 @@ import { FilesModule } from 'src/files/files.module';
     UploadFilesModule,
     // FilesModule,
     UsersCompanyModule,
-    AuthModule
+    AuthModule,
+    UsersModule,
+    FeedbackModule,
+    ResumeModule
   ],
   exports:[
     VacanciesService
@@ -31,7 +37,7 @@ import { FilesModule } from 'src/files/files.module';
   providers: [
     VacanciesService,
     // UsersCompanyService,
-    JwtModule
+    JwtModule,
     
   ]
 })
