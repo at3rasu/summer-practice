@@ -43,6 +43,8 @@ export class VacanciesController {
         return this.vacanciesService.deleteVacancy(id)
     }
 
+    // api.post('/vacancies/insert_resume/${id}')
+    // Добавляет резюме к вакансии (по номеру)
     @Post('/insert_resume/:id')
     @Roles('admin', 'user')
     @UseGuards(RolesGuard)
@@ -50,6 +52,8 @@ export class VacanciesController {
         return this.vacanciesService.insertResume(id_vacancy, request)
     }
 
+    // api.get('/vacancies/get_resume/${id}')
+    // По номеру вакансии выдает все отклинувшиеся резюме
     @Get('/get_resume/:id')
     @Roles('admin', 'user', 'user_company')
     @UseGuards(RolesGuard)
