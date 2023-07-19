@@ -15,10 +15,6 @@ export const StudentStatistics = () =>{
                     <div className={styles.table}>
                         <ChartCity /> 
                         <ChartStudent />
-                        <div className={styles.gridReg}>
-                            <p>Всего зарегистрировано</p>
-                            <h1>4550</h1>
-                        </div>
                     </div>
                 </div>
             </div>

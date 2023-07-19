@@ -9,6 +9,7 @@ import {
 } from 'chart.js';
 import { Bar } from 'react-chartjs-2';
 import styles from './ChartRegister.module.css'
+import ChartDataLabels from 'chartjs-plugin-datalabels';
 
 ChartJS.register(
     CategoryScale,
@@ -19,32 +20,23 @@ ChartJS.register(
   );
 
 export const ChartStudent = () => {
-  const barChartData = {
+    const barChartData = {
     labels: [ "Программная инженения", "Оптотехника", "Журналистика", "Медицина", "Биохимия"],
     datasets: [
-      {
+        {
         label: 'Студентов',
         data: [798, 725, 615, 421, 365],
         borderColor: "#F27E80",
-        backgroundColor: "#F27E80",
-        fill: true
-      },
+        backgroundColor: ["#F27E80", "#E05B5B"]
+        },
     ]
-  };
-
-  const barChart = (
-    <div className={styles.box}>
-    <Bar
-      type="bar"
-      width={90}
-      height={40}
-      options={{
+    };
+    const options = {
         responsive: true,
         scales:{
             x:{
-                grid:{
-                    display: false,
-                    drawBorder: false
+                ticks: {
+                    stepSize: 200
                 }
             },
             y:{
@@ -53,7 +45,8 @@ export const ChartStudent = () => {
                     drawBorder: false
                 },
                 ticks:{
-                    display:false
+                    display:false,
+                    
                 }
             }
         },
@@ -63,10 +56,28 @@ export const ChartStudent = () => {
             datalabels: {
                 display: true,
                 color: "#FFFFFF",
+                font: {
+                    size: 18, // Change the font size here
+                    family: "Giga Sans", // Change the font family here
+                },
+                formatter: (value, context) => {
+                  // Display the label from the y-axis (labels array)
+                  return barChartData.labels[context.dataIndex];
+                }
             }
-        }
-      }}
+        },
+        categoryPercentage: 1
+    }
+
+  const barChart = (
+    <div className={styles.boxStudent}>
+    <Bar
+      type="bar"
+      width={90}
+      height={70}
+      options={options}
       data={barChartData}
+      plugins={[ChartDataLabels]}
     />
     </div>
   );

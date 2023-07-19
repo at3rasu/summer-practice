@@ -33,14 +33,24 @@ export const ChartCity = () =>{
         pointBorderColor: 'red',
         pointRadius: 5,
         borderRadius:4,
-        cutoutPercentage: 90,
+        cutout: '70%',
         plugins: {
             datalabels: {
                 display: false,
                 color: "Black",
-            }
-        }
+            },
+            centerText: {
+                display: true,
+                text: 'Total\n100', // Замените на свой текст
+                color: 'black', // Замените на желаемый цвет текста
+                fontStyle: 'Arial', // Замените на желаемый шрифт
+                sidePadding: 20,
+                lineHeight: 0.8,
+                fontSize: 18,
+            },
+        },
     }
+
     const renderCityList = () => {
         return chartCity.labels.map((city, index) => (
           <li key={index} className={styles.cityItem}>
@@ -57,7 +67,9 @@ export const ChartCity = () =>{
         <div className={styles.box}>
             <h1>Статистика студентов по городам</h1>
             <div className={styles.chart}>
-                <Doughnut  data={chartCity} options={options} plugins={[ChartDataLabels]}></Doughnut>
+                <div className={styles.city}>
+                  <Doughnut  data={chartCity} options={options} plugins={[ChartDataLabels]}></Doughnut>
+                </div>
                 <ul className={styles.cityList}>{renderCityList()}</ul>
             </div> 
         </div>
