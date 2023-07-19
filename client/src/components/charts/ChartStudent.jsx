@@ -18,13 +18,13 @@ ChartJS.register(
     Tooltip,
   );
 
-export const ChartRegister = () => {
+export const ChartStudent = () => {
   const barChartData = {
-    labels: [ "Янв", "Фев", "Мар", "Апр", "Май", "Июн", "Июл", "Авг", "Сен", "Окт", "Ноя", "Дек"],
+    labels: [ "Программная инженения", "Оптотехника", "Журналистика", "Медицина", "Биохимия"],
     datasets: [
       {
         label: 'Студентов',
-        data: [300, 300, 400, 545, 100, 535, 213, 321, 545, 645, 133, 313],
+        data: [798, 725, 615, 421, 365],
         borderColor: "#F27E80",
         backgroundColor: "#F27E80",
         fill: true
@@ -36,8 +36,8 @@ export const ChartRegister = () => {
     <div className={styles.box}>
     <Bar
       type="bar"
-      width={230}
-      height={70}
+      width={90}
+      height={40}
       options={{
         responsive: true,
         scales:{
@@ -57,7 +57,14 @@ export const ChartRegister = () => {
                 }
             }
         },
-        borderRadius:10,
+        borderRadius:5,
+        indexAxis: 'y',
+        plugins: {
+            datalabels: {
+                display: true,
+                color: "#FFFFFF",
+            }
+        }
       }}
       data={barChartData}
     />

@@ -12,13 +12,13 @@ import ChartDataLabels from 'chartjs-plugin-datalabels';
 ChartJS.register(ArcElement, Tooltip)
 
 export const ChartCity = () =>{
-    const colors = ['#F42E30', '#D7282A', '#F54345', '#F98889', '#FF1800', '#BF3D30', '#684FD3'];
+    const colors = ['#E05153', '#8876D2', '#82EA9F', '#F277BA', '#F0B256'];
     const [chartCity] = useState({
-        labels: ['Екатеринбург', 'Красноуральск', 'Кировград', 'Верхняя пышма', 'Новоуральск', 'Другие'],
+        labels: ['Екатеринбург', 'Курган', 'Нижний Тагил', 'Верхняя пышма', 'Другие'],
         datasets: [
           {
             label: 'Студентов',
-            data: [48, 15, 28, 4, 23, 2],
+            data: [48, 15, 28, 4, 23],
           }
         ]
       })
