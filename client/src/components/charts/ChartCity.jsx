@@ -12,13 +12,13 @@ import ChartDataLabels from 'chartjs-plugin-datalabels';
 ChartJS.register(ArcElement, Tooltip)
 
 export const ChartCity = () =>{
-    const colors = ['#F42E30', '#D7282A', '#F54345', '#F98889', '#FF1800', '#BF3D30', '#684FD3'];
+    const colors = ['#E05153', '#8876D2', '#82EA9F', '#F277BA', '#F0B256'];
     const [chartCity] = useState({
-        labels: ['Екатеринбург', 'Красноуральск', 'Кировград', 'Верхняя пышма', 'Новоуральск', 'Другие'],
+        labels: ['Екатеринбург', 'Курган', 'Нижний Тагил', 'Верхняя пышма', 'Другие'],
         datasets: [
           {
             label: 'Студентов',
-            data: [48, 15, 28, 4, 23, 2],
+            data: [48, 15, 28, 4, 23],
           }
         ]
       })
@@ -33,14 +33,24 @@ export const ChartCity = () =>{
         pointBorderColor: 'red',
         pointRadius: 5,
         borderRadius:4,
-        cutoutPercentage: 90,
+        cutout: '70%',
         plugins: {
             datalabels: {
                 display: false,
                 color: "Black",
-            }
-        }
+            },
+            centerText: {
+                display: true,
+                text: 'Total\n100', // Замените на свой текст
+                color: 'black', // Замените на желаемый цвет текста
+                fontStyle: 'Arial', // Замените на желаемый шрифт
+                sidePadding: 20,
+                lineHeight: 0.8,
+                fontSize: 18,
+            },
+        },
     }
+
     const renderCityList = () => {
         return chartCity.labels.map((city, index) => (
           <li key={index} className={styles.cityItem}>
@@ -57,7 +67,9 @@ export const ChartCity = () =>{
         <div className={styles.box}>
             <h1>Статистика студентов по городам</h1>
             <div className={styles.chart}>
-                <Doughnut  data={chartCity} options={options} plugins={[ChartDataLabels]}></Doughnut>
+                <div className={styles.city}>
+                  <Doughnut  data={chartCity} options={options} plugins={[ChartDataLabels]}></Doughnut>
+                </div>
                 <ul className={styles.cityList}>{renderCityList()}</ul>
             </div> 
         </div>

@@ -9,6 +9,7 @@ import {
 } from 'chart.js';
 import { Bar } from 'react-chartjs-2';
 import styles from './ChartRegister.module.css'
+import ChartDataLabels from 'chartjs-plugin-datalabels';
 
 ChartJS.register(
     CategoryScale,
@@ -26,7 +27,7 @@ export const ChartRegister = () => {
         label: 'Студентов',
         data: [300, 300, 400, 545, 100, 535, 213, 321, 545, 645, 133, 313],
         borderColor: "#F27E80",
-        backgroundColor: "#F27E80",
+        backgroundColor: ["#F27E80", "#E05B5B"],
         fill: true
       },
     ]
@@ -36,8 +37,8 @@ export const ChartRegister = () => {
     <div className={styles.box}>
     <Bar
       type="bar"
-      width={230}
-      height={70}
+      width={240}
+      height={90}
       options={{
         responsive: true,
         scales:{
@@ -45,7 +46,15 @@ export const ChartRegister = () => {
                 grid:{
                     display: false,
                     drawBorder: false
-                }
+                },
+                ticks: {
+                  display: true, // Display x-axis labels
+                  color: "#000000", // Set font color
+                  font: {
+                    size: 17, // Change the font size here
+                    family: "Giga Sans", 
+                  }
+                },
             },
             y:{
                 grid:{
@@ -57,9 +66,24 @@ export const ChartRegister = () => {
                 }
             }
         },
-        borderRadius:10
+        plugins: {
+          datalabels: {
+              display: true,
+              color: "#000000",
+              font: {
+                  size: 18, // Change the font size here
+                  family: "Giga Sans", // Change the font family here
+              },
+              align: 'end', // Place the labels at the end of the bars
+              anchor: 'end', // Position the labels above the bars
+          }
+        },
+        borderRadius:5,
+        barPercentage: 1,
+        categoryPercentage: 1
       }}
       data={barChartData}
+      plugins={[ChartDataLabels]}
     />
     </div>
   );
