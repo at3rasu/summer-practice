@@ -12,7 +12,7 @@ export const Statistics = () => {
 
     return(
         <div className={styles.app}>
-            <SideBar />
+            {/* <SideBar /> */}
             <div className={styles.container}>
                 <span className={styles.title}>
                     <h1>Динамика регистраций</h1>    
