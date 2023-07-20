@@ -49,7 +49,7 @@ export const ChartScholarship = () => {
             },
             y:{
                 grid:{
-                    display:false,
+                    display:true,
                     drawBorder: false
                 },
                 ticks:{
@@ -78,8 +78,7 @@ export const ChartScholarship = () => {
         <div className={styles.box}>
             <Bar
                 type="bar"
-                width={240}
-                height={90}
+                height={130}
                 options={options}
                 data={barChartData}
                 plugins={[ChartDataLabels]}

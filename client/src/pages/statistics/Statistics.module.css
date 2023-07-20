@@ -1,69 +1,45 @@
 .app{
     background: #EEEFF2;
     height: 100vh;
-    display: flex;
-}
-
-.container{
-    flex: 1;
+    min-width: 320px;
+    overflow-x: hidden;
 }
 
 .title h1{
-    font-size: 35px;
+    color: #000;
+    font-family: Giga Sans;
+    font-size: 47.439px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 120%;
+    padding: 20px;
+}
+
+span{
+    display: flex;
+}
+
+.data h1{
+    color: rgba(0, 0, 0, 0.80);
+    margin-left: auto;
+    font-family: Inter;
+    font-size: 51px;
+    font-style: normal;
     font-weight: 600;
-    font-family: 'Inter';
-    padding: 70px 0;
+    line-height: 115.5%; /* 58.905px */
 }
 
-.chart{
+.data p{
+    color: rgba(0, 0, 0, 0.80);
+    font-family: Inter;
+    font-size: 23.492px;
+    font-style: normal;
+    font-weight: 400;
     display: flex;
-    flex-direction: column;
-    gap: 65px;
+    align-items: center;
+    line-height: 115.5%; /* 27.133px */
 }
 
-.table{
-    display: flex;
-    gap: 50px;
-}
-
-.grid{
-    display: flex;
-    gap: 50px;
-}
-
-.flex{
-    background: #FFFFFF;
-    padding: 50px;
-    border-radius: 30px;
-    box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.11);
-}
-
-.flex h1{
-    font-size: 40px;
-    font-family: "Inter";
-}
-
-.flex p{
-    font-size: 22px;
-    font-family: "Inter";
-    padding-bottom: 20px;
-}
-
-.gridReg{
-    background: #FFFFFF;
-    padding: 50px;
-    border-radius: 30px;
-    box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.11);
-}
-
-.gridReg p{
-    font-size: 22px;
-    font-family: "Inter";
-    padding-bottom: 20px;
-    padding-top: 50px;
-}
-
-.gridReg h1{
-    font-size: 50px;
-    font-family: "Inter";
+.data{
+    padding: 25px;
 }
