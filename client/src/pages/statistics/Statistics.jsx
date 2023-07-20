@@ -3,6 +3,7 @@ import { ChartRegister } from '../../components/charts/ChartRegister'
 import { ChartScholarship } from '../../components/charts/ChartScholarship'
 // import { Table } from '../../components/charts/Table'
 import { useEffect } from 'react'
+import { MobileHeader } from '../../components/header/MobileHeader'
 // import { TableStudent } from '../../components/charts/TableStudent'
 // import { SideBar } from '../../components/sidebar/SideBar'
 
@@ -13,6 +14,7 @@ export const Statistics = () => {
 
     return(
         <div className={styles.app}>
+            <MobileHeader />
             <div className={styles.container}>
                 <div className={styles.title}>
                     <h1>Динамика регистраций</h1>
