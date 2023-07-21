@@ -21,11 +21,11 @@ ChartJS.register(
 
 export const ChartRegister = () => {
   const barChartData = {
-    labels: [ "Янв", "Фев", "Мар", "Апр", "Май", "Июн", "Июл", "Авг", "Сен", "Окт", "Ноя", "Дек"],
+    labels: [ "Янв", "Фев", "Мар", "Апр", "Май", "Июн", "Июл"],
     datasets: [
       {
         label: 'Студентов',
-        data: [300, 300, 400, 545, 100, 535, 213, 321, 545, 645, 133, 313],
+        data: [300, 300, 400, 545, 100, 535, 213],
         borderColor: "#F27E80",
         backgroundColor: ["#F27E80", "#E05B5B"],
         fill: true
@@ -37,7 +37,7 @@ export const ChartRegister = () => {
     <div className={styles.box}>
       <Bar
         type="bar"
-        height={130}
+        height={310}
         options={{
           responsive: true,
           scales:{

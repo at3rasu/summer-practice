@@ -11,6 +11,38 @@ import ChartDataLabels from 'chartjs-plugin-datalabels';
 
 ChartJS.register(ArcElement, Tooltip)
 
+const centerTextPlugin = {
+  beforeDraw: function (chart) {
+    const ctx = chart.ctx;
+    const width = chart.width;
+    const height = chart.height;
+
+    ctx.restore();
+    const fontSize1 = 25;
+    const fontSize2 = 60;
+    const fontWeight = '600'; // Здесь устанавливаем толщину шрифта
+    ctx.font = `${fontWeight} ${fontSize1}px Inter`;
+    ctx.fillStyle = 'black';
+    ctx.textBaseline = 'middle';
+
+    const text1 = 'Всего студентов:'; // Замените это на первый текст
+    const textX1 = Math.round((width - ctx.measureText(text1).width) / 2);
+    const textY1 = height / 2 - fontSize1;
+
+    ctx.fillText(text1, textX1, textY1);
+
+    ctx.font = `${fontSize2}px Arial`;
+    const text2 = '3118'; // Замените это на второй текст
+    const textX2 = Math.round((width - ctx.measureText(text2).width) / 2);
+    const textY2 = height / 2 + fontSize2 / 2;
+
+    ctx.fillText(text2, textX2, textY2);
+
+    ctx.save();
+  },
+};
+
+
 export const ChartCity = () =>{
     const colors = ['#E05153', '#8876D2', '#82EA9F', '#F277BA', '#F0B256'];
     const [chartCity] = useState({
@@ -38,16 +70,7 @@ export const ChartCity = () =>{
             datalabels: {
                 display: false,
                 color: "Black",
-            },
-            centerText: {
-                display: true,
-                text: 'Total\n100', // Замените на свой текст
-                color: 'black', // Замените на желаемый цвет текста
-                fontStyle: 'Arial', // Замените на желаемый шрифт
-                sidePadding: 20,
-                lineHeight: 0.8,
-                fontSize: 18,
-            },
+            },            
         },
     }
 
@@ -65,10 +88,9 @@ export const ChartCity = () =>{
 
     return(
         <div className={styles.box}>
-            <h1>Статистика студентов по городам</h1>
             <div className={styles.chart}>
                 <div className={styles.city}>
-                  <Doughnut  data={chartCity} options={options} plugins={[ChartDataLabels]}></Doughnut>
+                  <Doughnut  data={chartCity} options={options} plugins={[ChartDataLabels, centerTextPlugin]}></Doughnut>
                 </div>
                 <ul className={styles.cityList}>{renderCityList()}</ul>
             </div> 

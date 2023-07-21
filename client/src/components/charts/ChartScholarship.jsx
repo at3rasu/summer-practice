@@ -21,10 +21,10 @@ ChartJS.register(
 
 export const ChartScholarship = () => {
     const barChartData = {
-        labels: [ "Янв", "Фев", "Мар", "Апр", "Май", "Июн", "Июл", "Авг", "Сен", "Окт", "Ноя", "Дек"],
+        labels: [ "Янв", "Фев", "Мар", "Апр", "Май", "Июн", "Июл"],
         datasets: [{
             label: 'Студентов',
-            data: [300, 300, 400, 545, 100, 535, 213, 321, 545, 645, 133, 313],
+            data: [300, 300, 400, 545, 100, 535, 213],
             borderColor: "#8A75E3",
             backgroundColor: ["#A696EC", "#8A75E3"],
         },]
@@ -78,7 +78,7 @@ export const ChartScholarship = () => {
         <div className={styles.box}>
             <Bar
                 type="bar"
-                height={130}
+                height={310}
                 options={options}
                 data={barChartData}
                 plugins={[ChartDataLabels]}

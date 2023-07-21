@@ -27,18 +27,24 @@ export const Statistics = () => {
                         <p>Среднее:</p>
                         <h1>416</h1>
                     </span>
+                    <hr></hr>
                     <span>
                         <p>Общее:</p>
                         <h1>4550</h1>
                     </span>
+                    <hr></hr>
                     <span>
                         <p>С области:</p>
                         <h1>3624</h1>
                     </span>
+                    <hr></hr>
                     <span>
                         <p>Иногородние:</p>
                         <h1>1096</h1>
                     </span>
+                </div>
+                <div className={styles.title}>
+                    <h1>Участие в программе</h1>
                 </div>
                 <div className={styles.chart}>
                     <ChartScholarship />
