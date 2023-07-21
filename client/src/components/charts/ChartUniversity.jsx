@@ -43,10 +43,10 @@ const centerTextPlugin = {
 }
 
 
-export const ChartCity = () =>{
+export const ChartUniversity = () =>{
     const colors = ['#E05153', '#8876D2', '#82EA9F', '#F277BA', '#F0B256'];
     const [chartCity] = useState({
-        labels: ['Екатеринбург', 'Курган', 'Нижний Тагил', 'Верхняя пышма', 'Другие'],
+        labels: ['УрФУ', 'УрГУСП', 'УГК', 'УрГЭУ', 'Другие'],
         datasets: [
           {
             label: 'Студентов',
@@ -98,9 +98,6 @@ export const ChartCity = () =>{
       });
     };
     
-    
-    
-
     return(
         <div className={styles.box}>
             <div className={styles.chart}>
