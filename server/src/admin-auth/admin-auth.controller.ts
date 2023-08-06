@@ -7,7 +7,7 @@ export class AdminAuthController {
 
     constructor(private adminAuthService: AdminAuthService){}
 
-    @Post('/login')
+    @Get('/login')
     adminLogin(@Body() adminDto: AdminDto){
         return this.adminAuthService.adminLogin(adminDto);
     }
