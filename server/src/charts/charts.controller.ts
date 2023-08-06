@@ -10,4 +10,10 @@ export class ChartsController {
     getChartCity(){
         return this.chartsService.getChartCity();
     }
+
+    @Get('/chart-register')
+    getChartRegister(){
+        return this.chartsService.getChartRegister();
+    }
+
 }

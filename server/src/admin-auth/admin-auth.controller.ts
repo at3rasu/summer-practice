@@ -8,7 +8,7 @@ export class AdminAuthController {
     constructor(private adminAuthService: AdminAuthService){}
 
     @Post('/login')
-    async adminLogin(@Body() adminDto: AdminDto){
+    adminLogin(@Body() adminDto: AdminDto){
         return this.adminAuthService.adminLogin(adminDto);
     }
 }

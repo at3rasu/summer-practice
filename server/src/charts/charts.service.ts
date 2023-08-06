@@ -15,19 +15,19 @@ export class ChartsService {
         };
     }
 
-    // async getChartRegister(){
-    //     return {
-    //         labels: [ "Янв", "Фев", "Мар", "Апр", "Май", "Июн", "Июл"],
+    async getChartRegister(){
+        return {
+            labels: [ "Янв", "Фев", "Мар", "Апр", "Май", "Июн", "Июл"],
 
-    //         datasets: [
-    //         {
-    //             label: 'Студентов',
-    //             data: [300, 300, 400, 545, 100, 535, 213],
-    //             borderColor: "#F27E80",
-    //             backgroundColor: ["#F27E80", "#E05B5B"],
-    //             fill: true
-    //         },
-    //         ]
-    //     };
-    // }
+            datasets: [
+            {
+                label: 'Студентов',
+                data: [300, 300, 400, 545, 100, 535, 213],
+                borderColor: "#F27E80",
+                backgroundColor: ["#F27E80", "#E05B5B"],
+                fill: true
+            },
+            ]
+        };
+    }
 }
