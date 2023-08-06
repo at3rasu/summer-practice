@@ -1,4 +1,13 @@
-import { Controller } from '@nestjs/common';
+import { Controller, Get } from '@nestjs/common';
+import { ChartsService } from './charts.service';
 
 @Controller('charts')
-export class ChartsController {}
+export class ChartsController {
+
+    constructor(private chartsService: ChartsService){}
+
+    @Get('/chart-city')
+    getChartCity(){
+        return this.chartsService.getChartCity();
+    }
+}

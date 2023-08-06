@@ -29,8 +29,7 @@ import { ChartsModule } from './charts/charts.module';
 
 @Module({
     controllers: [
-    FeedbackController,
-    ChartsController,
+    FeedbackController
     ],
     providers: [],
     imports: [
