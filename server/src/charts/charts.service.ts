@@ -30,4 +30,30 @@ export class ChartsService {
             ]
         };
     }
+
+    async getChartScholarship(){
+        return{
+            labels: [ "Янв", "Фев", "Мар", "Апр", "Май", "Июн", "Июл"],
+            datasets: [{
+                label: 'Студентов',
+                data: [300, 300, 400, 545, 100, 535, 213],
+                borderColor: "#8A75E3",
+                backgroundColor: ["#A696EC", "#8A75E3"],
+            },]
+        };
+    }
+
+    async getChartStudent(){
+        return{
+            labels: [ "Программная инженения", "Оптотехника", "Журналистика", "Медицина", "Биохимия"],
+            datasets: [
+                {
+                label: 'Студентов',
+                data: [798, 725, 615, 421, 365],
+                borderColor: "#F27E80",
+                backgroundColor: ["#F27E80", "#E05B5B"]
+                },
+            ]
+        };
+    }
 }
