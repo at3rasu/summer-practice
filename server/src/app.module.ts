@@ -22,12 +22,15 @@ import { FeedbackController } from './feedback/feedback.controller';
 import { FeedbackModule } from './feedback/feedback.module';
 import { VacanciesResume } from "./feedback/feedback.model";
 import { AdminAuthModule } from './admin-auth/admin-auth.module';
+import { ChartsController } from './charts/charts.controller';
+import { ChartsModule } from './charts/charts.module';
 
 
 
 @Module({
     controllers: [
     FeedbackController,
+    ChartsController,
     ],
     providers: [],
     imports: [
@@ -72,7 +75,8 @@ import { AdminAuthModule } from './admin-auth/admin-auth.module';
       // FilesModule,
       ResumeModule,
       FeedbackModule,
-      AdminAuthModule
+      AdminAuthModule,
+      ChartsModule
     ]
 })
 
