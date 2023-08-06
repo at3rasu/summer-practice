@@ -21,7 +21,6 @@ import { Resume } from "./resume/resume.model";
 import { FeedbackController } from './feedback/feedback.controller';
 import { FeedbackModule } from './feedback/feedback.module';
 import { VacanciesResume } from "./feedback/feedback.model";
-import { AdminauthController } from "./admin-auth/admin-auth.controller";
 import { AdminAuthModule } from './admin-auth/admin-auth.module';
 
 
@@ -29,7 +28,7 @@ import { AdminAuthModule } from './admin-auth/admin-auth.module';
 @Module({
     controllers: [
     FeedbackController,
-    AdminauthController],
+    ],
     providers: [],
     imports: [
       ConfigModule.forRoot({
