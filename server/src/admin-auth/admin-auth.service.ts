@@ -8,6 +8,6 @@ export class AdminAuthService {
         if (adminDto.password != "irit"){
             throw new UnauthorizedException({message: "Неправильный пароль"})
         }
-        return adminDto
+        return { "message" : "Вход выполнен успешно"}
     }
 }
