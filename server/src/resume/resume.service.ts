@@ -1,4 +1,4 @@
-import { Injectable } from '@nestjs/common';
+import { Injectable, BadRequestException } from '@nestjs/common';
 import { JwtService } from '@nestjs/jwt';
 import { InjectModel } from '@nestjs/sequelize';
 import { AuthService } from 'src/auth/auth.service';
@@ -18,10 +18,15 @@ export class ResumeService {
         const user = await this.userService.getUserByRequest(req)
         console.log(user)
         resumeDto.userId = user.id
-        const vacancy = await this.resumeRepository.create({...resumeDto,
+        try{
+            const vacancy = await this.resumeRepository.create({...resumeDto,
             // image: fileName
-        });
-        return this.generateToken(vacancy);
+            });
+            return this.generateToken(vacancy);
+        }
+        catch(e){
+            throw new BadRequestException('Неправильно заполнены поля для резюме')
+        }
     }
 
     async getAllResume(){

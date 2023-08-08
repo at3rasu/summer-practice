@@ -1,4 +1,4 @@
-import { Injectable } from '@nestjs/common';
+import { Injectable, BadRequestException } from '@nestjs/common';
 import { InjectModel } from '@nestjs/sequelize';
 import { CreateVacancyDto } from './dto/create-vacancy.dto';
 import { Vacancy } from './vacancies.model';
@@ -34,10 +34,16 @@ export class VacanciesService {
         // const fileName = await this.filesService.createFile(FileType.IMAGE, image)
         const user = await this.userCompanyService.getUserCompanyByRequest(req)
         vacancyDto.userCompanyId = user.id
-        const vacancy = await this.vacancyRepository.create({...vacancyDto,
-            // image: fileName
-        });
-        return this.generateToken(vacancy);
+        try{
+            const vacancy = await this.vacancyRepository.create({...vacancyDto,
+                // image: fileName
+            });    
+            return this.generateToken(vacancy);
+        }
+        catch(e){
+            throw new BadRequestException('Неправильно заполнены поля для вакансии')
+        }
+        
     }
 
     private async generateToken(vacancy: Vacancy){
