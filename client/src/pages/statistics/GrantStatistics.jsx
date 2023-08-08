@@ -1,3 +1,4 @@
+import { ChartBudget } from '../../components/charts/ChartBudget'
 import { MobileHeader } from '../../components/header/MobileHeader'
 import styles from './Statistics.module.css'
 
@@ -25,6 +26,10 @@ export const GrantStatistics = () =>{
                         <h1>32</h1>
                     </span>
                 </div>
+                <div className={styles.title}>
+                    <h1>Выделенный бюджет</h1>
+                </div>
+                <ChartBudget />
             </div>
         </div>
     )

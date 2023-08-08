@@ -49,5 +49,10 @@ span{
 
 
 @media(min-width:1600px){
-    
+    .container{
+        width: 90vw;
+        margin: 0 auto;
+        display: flex;
+        gap: 70px;
+    }    
 }
