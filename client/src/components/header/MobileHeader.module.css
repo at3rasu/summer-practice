@@ -32,3 +32,12 @@
     height: 10px;
     margin-top: -38px;
 }
+
+.menu {
+    width: 100%у;
+    height: 89vh;
+    background: #EEEFF2;
+    position: absolute;
+    overflow: hidden;
+}
+  

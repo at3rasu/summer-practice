@@ -10,22 +10,22 @@ export const StudentStatistics = () =>{
         <div className={styles.app}>
             <MobileHeader />
             <div className={styles.container}>
-            <div className={styles.title}>
-                    <h1>Распределение по ВУЗам</h1>
-                </div>
                 <div className={styles.chart}>
+                    <div className={styles.title}>
+                        <h1>Распределение по ВУЗам</h1>
+                    </div>
                     <ChartUniversity />
                 </div>
-                <div className={styles.title}>
-                    <h1>Распределение по городам</h1>
-                </div>
                 <div className={styles.chart}>
+                    <div className={styles.title}>
+                        <h1>Распределение по городам</h1>
+                    </div>
                     <ChartCity />
                 </div>
-                <div className={styles.title}>
-                    <h1>Распределение специальностей</h1>
-                </div>
                 <div className={styles.chart}>
+                    <div className={styles.title}>
+                        <h1>Распределение специальностей</h1>
+                    </div>
                     <ChartStudent />
                 </div>
             </div>

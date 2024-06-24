@@ -6,6 +6,20 @@
     padding: 20px; */
 }
 
+.box1{
+    padding: 3px;
+}
+
+@media(min-width:1600px){
+    .boxStudent{
+        background: #FFFFFF;
+        border-radius: 40px;
+        padding: 30px;
+        width: 32vw;
+    }  
+
+}
+
 
 /* .boxStudent{
     width: 645px;
