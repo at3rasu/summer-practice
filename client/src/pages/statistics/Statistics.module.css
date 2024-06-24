@@ -1,0 +1,58 @@
+.app{
+    background: #EEEFF2;
+    height: 100vh;
+    min-width: 320px;
+    overflow-x: hidden;
+}
+
+.title h1{
+    color: #000;
+    font-family: Giga Sans;
+    font-size: 38.6px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 120%;
+    padding: 20px;
+}
+
+span{
+    display: flex;
+}
+
+.data h1{
+    color: rgba(0, 0, 0, 0.80);
+    margin-left: auto;
+    font-family: Inter;
+    font-size: 51px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 115.5%; /* 58.905px */
+}
+
+.data p{
+    color: rgba(0, 0, 0, 0.80);
+    font-family: Inter;
+    font-size: 23.492px;
+    font-style: normal;
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+    line-height: 115.5%; /* 27.133px */
+}
+
+.data{
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+
+@media(min-width:1600px){
+    .container{
+        width: 90vw;
+        margin: 0 auto;
+        display: flex;
+        gap: 70px;
+    }    
+}

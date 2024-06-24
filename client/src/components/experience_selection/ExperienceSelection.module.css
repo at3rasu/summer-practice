@@ -1,0 +1,37 @@
+.selection{
+    background-color: #fafafa;
+    border:0;
+    width: 98%;
+    box-shadow:0 0 4px rgba(0,0,0,0.3);  
+}
+
+.selection option{
+    font-size: 20px;
+    background-color: #fafafa;
+    border:0;
+    box-shadow:0 0 4px rgba(0,0,0,0.3);
+}
+
+.selection select{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 22px;
+    line-height: 27px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    height: 48px;
+    padding: 10px;
+
+    appearance: none;
+    background: url('../../../public/img/_select.svg') no-repeat right;
+    background-position-x: 99%;
+
+    color: #302A27
+}
+
+.selection select:focus{
+    outline: 0;
+    outline-offset: 0;
+}

@@ -1,0 +1,66 @@
+.container{
+    min-height: calc(100vh - 80px);
+    width: 1396px;
+    margin: 130px auto;
+    font-family: 'Inter';
+    font-style: normal;
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+}
+
+.title{
+    color: #000000;
+}
+
+.title h1{
+    font-weight: 600;
+    font-size: 76px;
+    line-height: 116px;
+}
+
+.title p{
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 36px;
+}
+
+.number{
+    gap: 100px;
+    display: flex;
+}
+
+.enum p{
+    font-weight: 700;
+    font-size: 75px;
+    line-height: 91px;
+    color: rgba(0, 0, 0, 0.23);
+}
+
+.enum p:last-child{
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 36px;
+    color: #000000;
+}
+
+.content{
+    width: 1396px;
+    height: 163px;
+    border: 5px solid #F52D30;
+    padding: 25px 61px;
+}
+
+.content p{
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 36px;
+    color: #000000;
+}
+
+.text{
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 36px;
+    color: #000000;
+}

@@ -1,0 +1,142 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.header{
+    background: linear-gradient(to right, #8269EF 50%, #FFFFFF 50%);
+}
+
+.container{
+    display: flex;
+    background: #FFFFFF;;
+    width: 1899px;
+    margin: 0 auto;
+    display: flex;
+}
+
+.logo{
+    background-image: url(/public/img/header2.svg);
+    background-position: left;
+    background-repeat: no-repeat;
+    width: 520px;
+    height: 105px;
+    display: flex;
+}
+
+.logo a:first-child{
+    display: block;
+    margin-left: 26px;
+    margin-top: 19px;
+}
+
+.logo a:not(:first-child){
+    text-decoration: none;
+    background: #FFFFFF;
+    box-shadow: 0px 10px 27px rgba(0, 0, 0, 0.25);
+    border-radius: 33px;
+    width: 194px;
+    height: 46px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 25px;
+    color: #8269EF;
+    margin: 35px;
+}
+
+.logo a:not(:first-child):hover{
+    background: #EFEFEF;
+}
+
+.link{
+    padding-top: 35px;
+    display: flex;
+    gap: 20px;
+}
+
+.link a{
+    text-decoration: none;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+
+    /* identical to box height */
+    height: 45px;
+    display: flex;
+    align-items: center;
+    background: #EFEFEF;
+    border-radius: 1000px;
+    padding: 0 25px;
+    color: #333333;
+}
+
+.a{
+    background-color: #8269EF;
+    height: 20px;
+    width: 100%;
+    margin-top: -3px;
+    border-radius: 0  20px;
+}
+
+
+
+.btn button{
+    background: #EFEFEF;
+    border-radius: 3243.24px;
+    width: 45px;
+    height: 45px;
+    border: none;
+    cursor: pointer;
+}
+
+.btn{
+    padding-top: 30px;
+    padding-left: 224px;
+}
+
+.modileHeader{  
+    height: 85px;
+}
+
+.modileBtn{
+    background-image: url(/public/img/60.svg);
+    background-repeat: no-repeat;
+    height: 100px;
+    width: 100px;
+}
+
+.modileBtn button{
+    background: none;
+    border: none;
+    outline: none;
+    padding: 30px 20px;
+}
+
+.modileContainer{
+    padding-top: 24px;
+    display: flex;
+}
+
+.b{
+    background: #8269EF;
+    height: 10px;
+    margin-top: -38px;
+}
+
+.modileLogo{
+    width: 200px;
+    margin: 0 auto;
+}
+
+@media (max-width: 1600px){                        
+    .btn{
+        padding-left: 80px;     
+    }
+}

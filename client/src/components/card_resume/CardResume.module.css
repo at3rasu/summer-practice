@@ -1,0 +1,116 @@
+.component{
+    background: #FFFFFF;
+    box-shadow: 0px 0px 16px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    width: 90vw;
+    max-width: 1255px;
+    font-family: 'Inter';
+    font-style: normal;
+    margin: 50px 262px;
+}
+
+.title p{
+    font-weight: 500;
+    font-size: 25px;
+    line-height: 30px;
+    display: flex;
+    align-items: center;
+
+    color: #000000;
+}
+
+.title{
+    padding: 32px 0 25px 30px;
+}
+
+.content p{
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 18px;
+
+    color: #000000;
+}
+
+.content{
+    height: 36px;
+    padding: 0 30px;
+}
+
+.text{
+    display: flex;
+    padding: 15px 0 39px 30px;
+}
+
+.text p{
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 18px;
+    color: #000000;
+}
+
+.url p{
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 18px;
+
+    color: #000000;
+}
+
+.url span{
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 18px;
+    text-decoration: underline;
+    color: #0664D3CC;
+}
+
+.url{
+    padding-left: 30px;
+    padding-bottom: 20px;
+}
+
+@media (max-width: 480px){
+    .component{
+        max-height: 400px;
+        border-radius: 15px;
+        margin: 50px 20px;
+    }
+
+    .title p{
+        font-size: 20px;
+    }
+    
+    .title{
+        padding: 22px 0 5px 20px;
+    }
+    
+    .content p{
+        font-size: 13px;
+    }
+    
+    .content{
+        height: 110px;
+        padding: 0 20px;
+    }
+    
+    .text{
+        flex-direction: column;
+        padding: 15px 0 20px 20px;
+    }
+    
+    .text p{
+        font-size: 13px;
+    }
+    
+    .url p{
+        font-size: 13px;
+    }
+    
+    .url span{
+        font-size: 13px;
+    }
+    
+    .url{
+        padding-left: 20px;
+    }
+}
